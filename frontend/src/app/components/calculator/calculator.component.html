@@ -1,0 +1,42 @@
+ <div class="calculator">
+  <!-- Expression display -->
+  <div class="expression">{{ expression }}&nbsp;</div>
+
+  <!-- Main display -->
+  <div class="display">
+    <span class="operator-indicator">{{ operatorDisplay }}</span>
+    <span class="display-value">{{ display }}</span>
+  </div>
+
+  <!-- Buttons grid -->
+  <div class="buttons">
+    <!-- Row 1 -->
+    <button class="btn btn-function" (click)="onClear()">AC</button>
+    <button class="btn btn-function" (click)="onToggleSign()">+/−</button>
+    <button class="btn btn-function" (click)="onPercentage()">%</button>
+    <button class="btn btn-operator" (click)="onOperator('divide')">÷</button>
+
+    <!-- Row 2 -->
+    <button class="btn btn-number" (click)="onDigit('7')">7</button>
+    <button class="btn btn-number" (click)="onDigit('8')">8</button>
+    <button class="btn btn-number" (click)="onDigit('9')">9</button>
+    <button class="btn btn-operator" (click)="onOperator('multiply')">×</button>
+
+    <!-- Row 3 -->
+    <button class="btn btn-number" (click)="onDigit('4')">4</button>
+    <button class="btn btn-number" (click)="onDigit('5')">5</button>
+    <button class="btn btn-number" (click)="onDigit('6')">6</button>
+    <button class="btn btn-operator" (click)="onOperator('subtract')">−</button>
+
+    <!-- Row 4 -->
+    <button class="btn btn-number" (click)="onDigit('1')">1</button>
+    <button class="btn btn-number" (click)="onDigit('2')">2</button>
+    <button class="btn btn-number" (click)="onDigit('3')">3</button>
+    <button class="btn btn-operator" (click)="onOperator('add')">+</button>
+
+    <!-- Row 5 -->
+    <button class="btn btn-number btn-zero" (click)="onDigit('0')">0</button>
+    <button class="btn btn-number" (click)="onDecimal()">.</button>
+    <button class="btn btn-equals" (click)="onEquals()">=</button>
+  </div>
+</div>
